@@ -2,29 +2,29 @@ Pilot
 -----
 
 pilot_id
-    INTEGER
+    SERIAL
     Unique Pilot Identifier
 
 first_name
-    varchar(50)
+    varchar(100)
 
 Last_name
     varchar(50)
 
 phone_number
-    INTEGER
+    VARCHAR(20)
 
 email
-    Email
+    VARCHAR(100)
 
 address
 varchar(100)
 
 date_joined
-    date
+    VARCHAR(10)
 
 date_added
-    date
+    VARCHAR(10)
 
 certificate_type
     varchar(100)
@@ -32,7 +32,7 @@ certificate_type
 certificate_number
     varchar(100)
 certificate_expiration_date
-    date
+    VARCHAR(10)
 
 status
     varchar(100)
@@ -41,20 +41,20 @@ status
 Client
 -------
 Client_id
-    INTEGER
+    SERIAL
     Unique Client Identifier
 
 Contact_name
-    varchar
+    varchar(100)
 
 Company_name
-    varchar
+    varchar(100)
 
 email
-    email
+    VARCHAR(50)
 
 phone
-    INTEGER
+    VARCHAR(20)
 
 billing_address
     varchar(100)
@@ -65,7 +65,7 @@ notes
 Mission
 --------
 Mission_id
-    INTEGER
+    SERIAL
     Unique_identifier
 
 client_id
@@ -84,7 +84,7 @@ location
     varchar(100)
 
 date
-    date
+    VARCHAR(10)
 
 Pilot_in_command_id
     Foreign_key
@@ -99,7 +99,7 @@ Notes
 UAV ( Unmanned Aircraft Vehicle )
 ---
 Aircraft_id
-    INTEGER
+    SERIAL
     Unique_indentifier
 
 Manufacturer
@@ -115,7 +115,7 @@ Registration
     SERIAL
 
 purchase_date
-    date
+    VARCHAR(10)
 
 weight
     INTEGER
@@ -130,7 +130,7 @@ batt_id
     unique identifier
 
 aircraft_id
-    Foreign_identifier
+    Foreign_KEY
 
 serial_number
     SERIAL
@@ -139,7 +139,7 @@ Cycle_count
     Integer
 
 Purchase Date
-    date
+    VARCHAR(10)
 
 health_status
     varchar(100)
@@ -148,7 +148,7 @@ Status
     varchar(100)
 
 
-Flight
+Flight 
 ------
 Flight_id
     INTEGER
@@ -167,7 +167,7 @@ battery_id
     Foreign_key
 
 date
-    date
+    VARCHAR(10)
 
 Takeoff_location
     varchar(100)
