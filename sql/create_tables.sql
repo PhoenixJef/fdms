@@ -3,38 +3,38 @@ CREATE TABLE pilot (
     pilot_id SERIAL PRIMARY KEY,
     first_name VARCHAR(100),
     last_name VARCHAR(50),
-    phone_number VARCHAR(100),
+    phone_number VARCHAR(20),
     email VARCHAR(100),
-    pilot_address VARCHAR(100),
+    pilot_address VARCHAR(300),
     date_joined DATE,
     date_added DATE,
     certificate_type VARCHAR(100),
-    certificate_nuber VARCHAR(100),
+    certificate_number VARCHAR(100),
     certificate_expiration_date DATE,
-    pilot_status VARCHAR(50),
+    pilot_status VARCHAR(50)
 )
 
 CREATE TABLE client (
     client_id SERIAL PRIMARY KEY,
-    client_name VARCHAR(100),
-    company_name VARCHAR(50),
-    phone_number VARCHAR(100),
+    contact_name VARCHAR(100),
+    company_name VARCHAR(100),
+    phone_number VARCHAR(20),
     email VARCHAR(100),
-    billing_address VARCHAR(100),
-    note TEXT,
+    billing_address VARCHAR(300),
+    note TEXT
 )
 
 CREATE TABLE mission (
     mission_id SERIAL PRIMARY KEY,
     client_id INT REFERENCES client(client_id),
-    mission_name VARCHAR(50),
+    mission_name VARCHAR(100),
     mission_type VARCHAR(100),
     objective VARCHAR(100),
     mission_location VARCHAR(100),
     mission_date DATE,
     pilot_in_command_id INT REFERENCES pilot(pilot_id),
     mission_status VARCHAR(100),
-    note TEXT,
+    note TEXT
 )
 
 CREATE TABLE uav (
@@ -45,7 +45,7 @@ CREATE TABLE uav (
     registration_number VARCHAR(100),
     purchase_date DATE,
     aircraft_weight INT,
-    aircraft_status VARCHAR(50),
+    aircraft_status VARCHAR(50)
 )
 
 CREATE TABLE battery (
@@ -55,7 +55,7 @@ CREATE TABLE battery (
     cycle_count INT,
     purchase_date DATE,
     health_status VARCHAR(100),
-   battery_status VARCHAR(50),
+   battery_status VARCHAR(50)
 )
 
 CREATE TABLE flight (
@@ -69,10 +69,10 @@ CREATE TABLE flight (
     takeoff_time TIME,
     landing_location VARCHAR(100),
     landing_time TIME,
-    duration_min TIME,
+    duration_min INT,
     max_speed_mph INT,
     max_altitude_ft INT,
     flight_range_ft INT,
     flight_status VARCHAR(50),
-    flight_note TEXT, 
+    flight_note TEXT
 )
