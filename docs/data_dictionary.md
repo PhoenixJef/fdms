@@ -21,10 +21,10 @@ address
 varchar(100)
 
 date_joined
-    VARCHAR(10)
+    DATE    
 
 date_added
-    VARCHAR(10)
+    DATE
 
 certificate_type
     varchar(100)
@@ -32,7 +32,7 @@ certificate_type
 certificate_number
     varchar(100)
 certificate_expiration_date
-    VARCHAR(10)
+    DATE
 
 status
     varchar(100)
@@ -83,8 +83,8 @@ Objective
 location
     varchar(100)
 
-date
-    VARCHAR(10)
+mission_date
+    DATE
 
 Pilot_in_command_id
     Foreign_key
@@ -109,13 +109,13 @@ Model
     varchar(100)
 
 Serial_number
-    SERIAL
+    VARCHAR(100)
 
 Registration
-    SERIAL
+    VARCHAR(100)
 
 purchase_date
-    VARCHAR(10)
+    DATE
 
 weight
     INTEGER
@@ -126,20 +126,20 @@ status
 Battery  
 -------
 batt_id
-    INTEGER 
+    SERIAL
     unique identifier
 
 aircraft_id
     Foreign_KEY
 
 serial_number
-    SERIAL
+    VARCHAR(100)
 
 Cycle_count
     Integer
 
 Purchase Date
-    VARCHAR(10)
+    DATE
 
 health_status
     varchar(100)
@@ -151,13 +151,13 @@ Status
 Flight 
 ------
 Flight_id
-    INTEGER
+    SERIAL
     unique_identifier
 
 mission_id
     foreign_key
 
-pilot_in_command
+pilot_id
     Foreign_key
 
 aircraft_id
@@ -167,19 +167,19 @@ battery_id
     Foreign_key
 
 date
-    VARCHAR(10)
+    DATE
 
 Takeoff_location
     varchar(100)
 
 takeoff_time
-    Integer
+    TIME
 
 landing_location
     varchar(100)
 
 landing_time
-    Integer
+    TIME
 
 duration_minutes
     integer
